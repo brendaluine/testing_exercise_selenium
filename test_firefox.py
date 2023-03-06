@@ -92,6 +92,7 @@ card_number.send_keys('0000000000')
 card_type = Select(driver.find_element(By.NAME, 'PC16725$DonationCapture1$cboCardType'))
 card_type.select_by_visible_text('Visa')
 
+#to submit and/or close the window
 #driver.implicitly_wait(20) #wait for page to update
 
 #donate_btn = driver.find_element(By.NAME, 'PC16725$btnNext').click()
