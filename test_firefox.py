@@ -2,15 +2,17 @@ from selenium import webdriver
 from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.service import Service
+from os import path
 
+#set up options
 firefoxOptions = Options()
 
 options = [
   # Define window size here
-   #"--window-size=1200,1200",
-    "--ignore-certificate-errors"
-    "--start-maximized"
+    "--window-size=1200,1200",
+    "--ignore-certificate-errors",
+    "--private"
  
     #"--headless",
     #"--disable-gpu",
@@ -25,9 +27,12 @@ options = [
 for option in options:
     firefoxOptions.add_argument(option)
 
-driver = webdriver.Firefox(options=firefoxOptions)
+service = Service(log_path=path.devnull)
+
+driver = webdriver.Firefox(service=service, options=firefoxOptions)
 driver.get('https://www.giving.uts.edu.au/donate')
 
+#fill out the form
 choose_amount = driver.find_element(By.ID, 'amount225').click()
 
 #designation_dropdown = driver.find_element(By.ID, 's2id_PC16725_ddlDesignation').click
