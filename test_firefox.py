@@ -26,10 +26,10 @@ options = [
 for option in options:
     firefoxOptions.add_argument(option)
 
-#service = Service(log_path=path.devnull)
-s = Service('/usr/local/bin/geckodriver')
+#driver_path = Service(log_path=path.devnull)
+geckodriver_path = Service('/usr/local/bin/geckodriver')
 
-driver = webdriver.Firefox(service = s, options = firefoxOptions)
+driver = webdriver.Firefox(service = geckodriver_path, options = firefoxOptions)
 driver.get('https://www.giving.uts.edu.au/donate')
 
 try:
@@ -93,7 +93,7 @@ try:
   card_type = Select(driver.find_element(By.NAME, 'PC16725$DonationCapture1$cboCardType'))
   card_type.select_by_visible_text('Visa')
 
-#to submit and/or close the window
+#to submit 
 #driver.implicitly_wait(20) #wait for page to update
 
 #donate_btn = driver.find_element(By.NAME, 'PC16725$btnNext').click()
