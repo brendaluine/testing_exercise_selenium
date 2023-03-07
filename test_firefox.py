@@ -13,7 +13,6 @@ options = [
     "--window-size=1200,1200",
     "--ignore-certificate-errors",
     "--private"
- 
     #"--headless",
     #"--disable-gpu",
     #"--window-size=1920,1200",
@@ -28,9 +27,9 @@ for option in options:
     firefoxOptions.add_argument(option)
 
 #service = Service(log_path=path.devnull)
-service = Service('/usr/local/bin/geckodriver')
+s = Service('/usr/local/bin/geckodriver')
 
-driver = webdriver.Firefox(service = service, options = firefoxOptions)
+driver = webdriver.Firefox(service = s, options = firefoxOptions)
 driver.get('https://www.giving.uts.edu.au/donate')
 
 try:
