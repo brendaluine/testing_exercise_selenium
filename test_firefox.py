@@ -3,7 +3,6 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
-#from os import path
 
 #set up options
 firefoxOptions = Options()
@@ -26,7 +25,6 @@ options = [
 for option in options:
     firefoxOptions.add_argument(option)
 
-#driver_path = Service(log_path=path.devnull)
 geckodriver_path = Service('/usr/local/bin/geckodriver')
 
 driver = webdriver.Firefox(service = geckodriver_path, options = firefoxOptions)
@@ -35,12 +33,6 @@ driver.get('https://www.giving.uts.edu.au/donate')
 try:
   #fill out the form
   choose_amount = driver.find_element(By.ID, 'amount225').click()
-
-  #designation_dropdown = driver.find_element(By.ID, 's2id_PC16725_ddlDesignation').click
-  #designation_dropdown.send_keys('High Impact Research')
-  #designation_dropdown.select_by_visible_text('High Impact Research')
-  #designation_choice = driver.find_element(By.XPATH, '//*[@id="PC16725_ddlDesignations"]/option[15]').click()
-  #designation_choice = driver.find_element(By.ID, 'select2-result-label-314').click()
 
   gift_type = driver.find_element(By.XPATH, '//*[@id="PC16725_rdoGiftType"]/tbody/tr[3]/td/label').click()
 
