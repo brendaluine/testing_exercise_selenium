@@ -5,7 +5,7 @@ on: [push]
 jobs:
   build:
     
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps: 
       - name: Checkout
@@ -18,9 +18,6 @@ jobs:
         
       - name: Install selenium
         run: pip install selenium
-
-      - name: Install geckodriver
-        run: sudo apt install firefox-geckodriver
 
       - name: Run python script
         run: python3 test_firefox.py

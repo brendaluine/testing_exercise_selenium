@@ -3,7 +3,7 @@ from selenium.webdriver.firefox.options import Options
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
-from os import path
+#from os import path
 
 #set up options
 firefoxOptions = Options()
