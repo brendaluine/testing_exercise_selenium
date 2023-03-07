@@ -987,3 +987,23 @@ JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't fin
 DevTools listening on ws://127.0.0.1:33359/devtools/browser/20565958-bd62-4c2e-b9bd-3dd9ea4a15f7
 1678143350528	Marionette	WARN	Ignoring event 'pageshow' because document has an invalid readyState of 'uninitialized'.
 1678143356726	Marionette	INFO	Stopped listening on port 36935
+1678161381279	geckodriver	INFO	Listening on 127.0.0.1:45111
+1678161381319	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "--window-size=1200,1200" "--ignore-certificate-errors" "--private" "--remote-debugging-port" "35649" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "/tmp/rust_mozprofileFEUTV6"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+ATTENTION: default value of option mesa_glthread overridden by environment.
+1678161381725	Marionette	INFO	Marionette enabled
+1678161381727	Marionette	INFO	Listening on port 32939
+console.error: "Warning: unrecognized command line flag -window-size\n"
+console.error: "Warning: unrecognized command line flag -ignore-certificate-errors\n"
+Read port: 32939
+WebDriver BiDi listening on ws://127.0.0.1:35649
+1678161381859	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+console.error: ({})
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at /tmp/rust_mozprofileFEUTV6/search.json.mozlz4", (void 0)))
+JavaScript error: resource://gre/modules/XULStore.jsm, line 58: Error: Can't find profile directory.
+DevTools listening on ws://127.0.0.1:35649/devtools/browser/f55197a4-b5db-47de-a7e9-f193088d57a8
+1678161393642	Marionette	INFO	Stopped listening on port 32939
