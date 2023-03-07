@@ -1,5 +1,4 @@
 name: Selenium testing on UTS website
-#testing
 
 on: [push]
 
@@ -9,16 +8,16 @@ jobs:
     runs-on: ubuntu-latest
 
   steps: 
-  - name: checkout
-   uses: actions/checkout@v3
+    - name: checkout
+      uses: actions/checkout@v3
 
-  - name: setting up python
-    uses: actions/setup-python@v4
-    with:
-      python-version: 3.11
-    
-  - name: installing selenium
-    run: pip install selenium
+    - name: setting up python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+      
+    - name: installing selenium
+      run: pip install selenium
 
-  - name: run python script
-    run: python3 test_firefox.py
+    - name: run python script
+      run: python3 test_firefox.py
